@@ -8,4 +8,4 @@ News for your e-reader - scraped at 7 and at 4 again
 
 ## To generate e-reader .mobi files and place in webroot
 
-    ebook-convert recipes/tagesanzeiger.recipe /var/www/html/tagesanzeiger.mobi --output-profile kindle
+    bash scrape.sh
