@@ -1,0 +1,37 @@
+#!/usr/bin/env python2
+# vim:fileencoding=utf-8
+from __future__ import unicode_literals, division, absolute_import, print_function
+from calibre.web.feeds.news import BasicNewsRecipe
+
+
+class ArsTechnica(BasicNewsRecipe):
+    title = 'Ars Technica'
+    oldest_article = 7
+    max_articles_per_feed = 7
+    auto_cleanup = False
+    use_embedded_content = False
+    no_stylesheets = True
+    remove_attributes = ['width','height']
+    keep_only_tags = [
+        dict(name='h1', attrs={'itemprop':'headline'}),
+        dict(name='h2', attrs={'itemprop':'description'}),
+        dict(name='div', attrs={'itemprop':'articleBody'}),
+    ]
+    remove_tags = [
+        dict(id=['social-left',]),
+        dict(name='div', attrs={'class':'caption-text'}),
+        dict(name='div', attrs={'class':'caption-credit'}),
+    ]
+    feeds          = [
+        ('Technology Lab','http://feeds.arstechnica.com/arstechnica/technology-lab'),
+        ('Gear & Gadgets','http://feeds.arstechnica.com/arstechnica/gadgets'),
+        ('Ministry of Innovation','http://feeds.arstechnica.com/arstechnica/business'),
+        ('Risk Assessment','http://feeds.arstechnica.com/arstechnica/security'),
+        ('Law & Disorder','http://feeds.arstechnica.com/arstechnica/tech-policy'),
+        ('Infinite Loop','http://feeds.arstechnica.com/arstechnica/apple'),
+        ('Opposable Thumbs','http://feeds.arstechnica.com/arstechnica/gaming'),
+        ('The Scientific Method','http://feeds.arstechnica.com/arstechnica/science'),
+        ('The Multiverse','http://feeds.arstechnica.com/arstechnica/multiverse'),
+        ('Cars Technica','http://feeds.arstechnica.com/arstechnica/cars'),
+        ('Staff Blogs http://feeds.arstechnica.com/arstechnica/staff-blogs'),
+    ]
