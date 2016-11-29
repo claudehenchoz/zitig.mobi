@@ -33,5 +33,4 @@ class ArsTechnica(BasicNewsRecipe):
         ('The Scientific Method','http://feeds.arstechnica.com/arstechnica/science'),
         ('The Multiverse','http://feeds.arstechnica.com/arstechnica/multiverse'),
         ('Cars Technica','http://feeds.arstechnica.com/arstechnica/cars'),
-        ('Staff Blogs http://feeds.arstechnica.com/arstechnica/staff-blogs'),
     ]
